@@ -4,7 +4,7 @@ import classes from './Navbar.module.scss';
 
 const { logo } = classes;
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     const minimal = true;
 
