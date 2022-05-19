@@ -17,7 +17,7 @@ const Home = () => {
         <div className='overlay'>
             <Navbar minimal={true} authToken={authToken} />
             <div>
-                <h1 className="home">Swipe Right</h1>
+                <h1 className="home">Swipe Right&reg;</h1>
                 <button className="primary-button" onClick={handleClick}>
                     {
                         authToken ? 'Signout' : 'Create Account'
