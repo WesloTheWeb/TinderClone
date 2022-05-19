@@ -1,0 +1,49 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-size: 16px;
+}
+
+* {
+  font-family: 'Readex Pro', sans-serif;
+}
+
+button {
+  
+  &:hover {
+    cursor: pointer;
+    opacity: 85%;
+  }
+}
+
+.primary-button {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: linear-gradient(45deg, $redHue, $orangeHue);
+  padding: .75rem .5rem;
+  border-radius: 30px;
+
+  &:hover {
+    background: linear-gradient(260deg, $redHue, $orangeHue);
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  )
+}
