@@ -1,3 +1,27 @@
-.logo {
-        
-}
+@import '../../variables.scss';
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  
+    .logo-container {
+      width: 15rem;
+      margin: 1.5rem;
+    }
+  
+    .logo-container .logo {
+      width: 100%;
+    }
+
+    .navButton {
+        color: #000;
+        background-color: $white;
+        font-size: 2rem;
+        padding: 4.5rem 0.75rem;
+        border-radius: 10px;
+        border: none;
+    }
+    
+  }

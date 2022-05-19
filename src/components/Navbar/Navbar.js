@@ -1,20 +1,19 @@
 import React from 'react';
-import { tinderLogo1, tinderLogo2 } from '../../assets/index';
+import { colorLogo, whiteLogo } from '../../assets/index';
 import classes from './Navbar.module.scss';
 
-const { logo } = classes;
+const { navButton } = classes;
 
-const Navbar = () => {
-
-    const minimal = true;
+const Navbar = ({ minimal, authToken }) => {
 
     return (
         <nav>
-            <div>
-                <img className={logo} src={minimal ? tinderLogo1 : tinderLogo2} alt="tinder logo" />
+            <div className="logo-container">
+                <img className="logo" src={minimal ? colorLogo : whiteLogo} alt="tinder logo" />
             </div>
+            {!authToken ? <button className={navButton}>Log in</button> : <button className={navButton}>Log out</button>}
         </nav>
     );
 };
 
-export default Navbar
+export default Navbar;

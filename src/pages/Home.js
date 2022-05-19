@@ -14,8 +14,8 @@ const Home = () => {
     }, []);
 
     return (
-        <>
-            <Navbar />
+        <div className='overlay'>
+            <Navbar minimal={true} authToken={authToken} />
             <div>
                 <h1 className="home">Swipe Right</h1>
                 <button className="primary-button" onClick={handleClick}>
@@ -24,7 +24,7 @@ const Home = () => {
                     }
                 </button>
             </div>
-        </>
+        </div>
     );
 };
 

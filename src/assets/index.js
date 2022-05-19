@@ -1,4 +1,4 @@
-import tinderLogo1 from './tinder-logo.png';
-import tinderLogo2 from './tinder-logo-white.jpg';
+import colorLogo from './tinder-logo.png';
+import whiteLogo from './tinder-logo-white.jpg';
 
-export {tinderLogo1, tinderLogo2};
+export {colorLogo, whiteLogo};
