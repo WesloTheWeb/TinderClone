@@ -24,7 +24,7 @@ const Home = () => {
             {showModal && (
                 <>
                     <Overlay handleClick={handleClick} />
-                    <AuthModal handleClick={handleClick} isSignUp={isSignUp} />
+                    <AuthModal handleClick={handleClick} isSignUp={isSignUp} setShowModal={setShowModal} />
                 </>
             )}
             <div className='overlay'>
@@ -46,6 +46,5 @@ const Home = () => {
         </>
     );
 };
-
 
 export default Home;

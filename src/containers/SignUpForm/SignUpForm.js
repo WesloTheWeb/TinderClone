@@ -1,22 +1,19 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 
-const SignUpForm = ({ handleClick }) => {
-
-    const isSignUp = true;
+const SignUpForm = ({ handleClick, setShowModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Submitted!"')
+        setShowModal(false);
     }
     
     return (
-        <form  >
-
-            <button onClick={handleSubmit}>Submit</button>
+        <form  onSubmit={handleSubmit}>
+            <button type="submit">Submit</button>
             <button onClick={handleClick}>Close</button>
         </form>
     );
 };
-
 
 export default SignUpForm;
