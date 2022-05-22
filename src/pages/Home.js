@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import AuthModal from '../components/AuthModal/AuthModal';
 import Navbar from '../components/Navbar/Navbar';
+import Overlay from '../components/Overlay/Overlay';
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
 
     const handleClick = () => {
         console.log('Clicked');
-        setShowModal(!true);
+        setShowModal(true);
     }
 
     useEffect(() => {
@@ -17,20 +18,25 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='overlay'>
-            <Navbar minimal={true} authToken={authToken} />
+        <>
             {showModal && (
-                <AuthModal handleClick={handleClick} />
-            )}
-            <div>
-                <h1 className="home">Swipe Right&reg;</h1>
-                <button className="primary-button" onClick={handleClick}>
-                    {
-                        authToken ? 'Signout' : 'Create Account'
-                    }
-                </button>
+                <>
+                    <Overlay />
+                    <AuthModal handleClick={handleClick} />
+                </>
+                )}
+            <div className='overlay'>
+                <Navbar minimal={true} authToken={authToken} />
+                <div>
+                    <h1 className="home">Swipe Right&reg;</h1>
+                    <button className="primary-button" onClick={handleClick}>
+                        {
+                            authToken ? 'Signout' : 'Create Account'
+                        }
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

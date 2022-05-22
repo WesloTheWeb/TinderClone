@@ -1,9 +1,15 @@
 import React from 'react';
+import classes from './AuthModal.module.scss';
 
-const AuthModal = ({handeClick}) => {
+const { authModal } = classes;
+
+const AuthModal = ({ handeClick }) => {
     return (
-        <section>
-            <div onClick={handeClick}>x</div>
+        <section className={authModal}>
+            <form>
+                <h2>Create an account</h2>
+                <button onClick={handeClick}>Close</button>
+            </form>
         </section>
     );
 };
