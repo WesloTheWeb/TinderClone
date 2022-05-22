@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Overlay = (props) => {
+const Overlay = ({ handleClick }) => {
     return (
-        <div className='modal-overlay'></div>
+        <div onClick={handleClick}
+            className='modal-overlay'>
+        </div>
     );
 };
 

@@ -7,10 +7,12 @@ const Home = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [authToken, isAuthToken] = useState(true);
+    const [isSignUp, setIsSignUp] = useState(true);
 
     const handleClick = () => {
         console.log('Clicked');
-        setShowModal(true);
+        setShowModal(!showModal);
+        setIsSignUp(true);
     }
 
     useEffect(() => {
@@ -21,12 +23,17 @@ const Home = () => {
         <>
             {showModal && (
                 <>
-                    <Overlay />
-                    <AuthModal handleClick={handleClick} />
+                    <Overlay handleClick={handleClick} />
+                    <AuthModal handleClick={handleClick} isSignUp={isSignUp} />
                 </>
-                )}
+            )}
             <div className='overlay'>
-                <Navbar minimal={true} authToken={authToken} />
+                <Navbar
+                    minimal={true}
+                    authToken={authToken}
+                    setIsSignUp={setIsSignUp}
+                    setShowModal={setShowModal}
+                />
                 <div>
                     <h1 className="home">Swipe Right&reg;</h1>
                     <button className="primary-button" onClick={handleClick}>
