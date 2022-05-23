@@ -27,10 +27,10 @@ const SignUpForm = ({ setShowModal, isSignUp }) => {
                         <label>Password</label>
                         <input placeholder="Password" {...register("Password", { required: true })} />
                     </div>
-                    <div>
+                    {isSignUp ? <div>
                         <label>Confirm Password</label>
                         <input placeholder="Confirm Password" {...register("confirmPassword", { required: true })} />
-                    </div>
+                    </div> : null}
                 </section>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
