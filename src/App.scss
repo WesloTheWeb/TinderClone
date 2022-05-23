@@ -23,13 +23,19 @@ button {
   }
 }
 
+h1.home {
+  font-size: 7rem;
+  color: $white;
+}
+
 .primary-button {
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 1rem;
   background: linear-gradient(45deg, $redHue, $orangeHue);
-  padding: .75rem .5rem;
+  padding: 1.3rem 3.5rem;
   border-radius: 30px;
+  border: none;
 
   &:hover {
     background: linear-gradient(260deg, $redHue, $orangeHue);
@@ -45,7 +51,7 @@ button {
     to bottom,
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0) 100%
-  )
+  ), url('./assets/51dabf3e706bdd3381e9f9847e8140f6.webp');
 }
 
 .modal-overlay {
