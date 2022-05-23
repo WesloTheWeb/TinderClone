@@ -2,38 +2,41 @@ import { React } from 'react';
 import { useForm } from "react-hook-form";
 import classes from './SignUpForm.module.scss';
 
-const { generalInfo } = classes;
+const { generalInfo, generalInfoField } = classes;
 
-const SignUpForm = ({ handleClick, setShowModal }) => {
+const SignUpForm = ({ setShowModal, isSignUp }) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
-    console.log(watch("example")); // watch input value by passing the name of it
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log('Submitted!"')
-    //     setShowModal(false);
-    // }
+    const closeBox = (evnt) => {
+        evnt.preventDefault();
+        setShowModal(false);
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={generalInfo}>
-                {/* register your input into the hook by invoking the "register" function */}
-                <label>Name</label>
-                <input defaultValue="test" {...register("example")} />
-                {/* include validation with required or other standard HTML validation rules */}
-                <input {...register("exampleRequired", { required: true })} />
+                <section className={generalInfoField}>
+                    {/* register your input into the hook by invoking the "register" function */}
+                    <div>
+                        <label>Email</label>
+                        <input placeholder="Email" {...register("email", { required: true })} />
+
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input placeholder="Password" {...register("Password", { required: true })} />
+                    </div>
+                    <div>
+                        <label>Confirm Password</label>
+                        <input placeholder="Confirm Password" {...register("confirmPassword", { required: true })} />
+                    </div>
+                </section>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <label>Gender</label>
-                <select {...register("gender")}>
-                    <option value="female">female</option>
-                    <option value="male">male</option>
-                    <option value="other">other</option>
-                </select>
+                <button type="submit">{isSignUp ? 'Create Account' : 'Log in'}</button>
+                <button onClick={closeBox}>Close</button>
             </div>
-            <input type="submit" />
-            <button onClick={handleClick}>Close</button>
         </form>
     );
 };
