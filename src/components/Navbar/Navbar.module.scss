@@ -16,10 +16,11 @@ nav {
     }
 
     .navButton {
-        color: #000;
+        color: $redHue;
         background-color: $white;
-        font-size: 2rem;
-        padding: 4.5rem 0.75rem;
+        font-size: 1.5rem;
+        padding: 1rem 1.2rem;
+        margin: 1.5rem;
         border-radius: 10px;
         border: none;
     }

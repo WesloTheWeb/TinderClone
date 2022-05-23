@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.generalInfo  {
+    padding: 0 1rem;
+
+    & input, label, select {
+        display: block;
+        text-align: left;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    & section {
+        margin: 1rem auto;
+    }
+}
+
+form button {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 20px;
+    border: #a9a9a9 solid 2px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+    &:hover {
+        background-color: $lightGrey;
+        color: $white;
+    }
+}

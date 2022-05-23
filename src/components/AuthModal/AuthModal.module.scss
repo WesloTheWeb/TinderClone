@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.authModal {
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: .75rem 1rem;
+    margin: 0 auto;
+    top: 2.5rem; 
+    bottom: 2.5rem; 
+    left: 0; 
+    right: 0;
+    z-index: 10;
+}
