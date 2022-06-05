@@ -1,10 +1,19 @@
-import React from 'react';
+import { React, useState } from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
-const Onboarding = () => {
+const Onboarding = (props) => {
     return (
-        <div>Onboarding</div>
+        <>
+            <Navbar
+                minimal={true}
+                setShowModal={() => {}}
+                showModal={false}
+            />
+            <div>
+
+            </div>
+        </>
     );
 };
-
 
 export default Onboarding;
