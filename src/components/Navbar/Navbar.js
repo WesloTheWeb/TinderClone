@@ -4,12 +4,14 @@ import classes from './Navbar.module.scss';
 
 const { logoContainer, navButton } = classes;
 
-const Navbar = ({ minimal, authToken, setShowModal, setIsSignUp }) => {
+const Navbar = ({ minimal, setShowModal, setIsSignUp }) => {
 
     const handleNavBarClick = () => {
         setShowModal(true);
         setIsSignUp(false);
     }
+
+    const authToken = false;
 
     return (
         <nav>

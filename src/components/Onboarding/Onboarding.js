@@ -4,14 +4,7 @@ import Navbar from '../Navbar/Navbar';
 const Onboarding = (props) => {
     return (
         <>
-            <Navbar
-                minimal={true}
-                setShowModal={() => {}}
-                showModal={false}
-            />
-            <div>
-
-            </div>
+          <div>OnBoarding</div>
         </>
     );
 };

@@ -30,7 +30,6 @@ const Home = () => {
             <div className='overlay'>
                 <Navbar
                     minimal={true}
-                    authToken={authToken}
                     setIsSignUp={setIsSignUp}
                     setShowModal={setShowModal}
                 />
