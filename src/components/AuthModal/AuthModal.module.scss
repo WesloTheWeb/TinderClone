@@ -13,4 +13,11 @@
     left: 0; 
     right: 0;
     z-index: 10;
+
+    .exitBtn {
+        font-size: 1rem;
+        width: 1rem;
+        margin-left: auto;
+        cursor: pointer;
+    }
 }
