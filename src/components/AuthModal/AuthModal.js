@@ -16,7 +16,7 @@ const AuthModal = ({ handleClick, isSignUp, setShowModal }) => {
                     </svg>
                 </div>
                 {smallLogo}
-                {isSignUp ? <h2>Create an account</h2> : <h2>Log in</h2>}
+                {isSignUp ? <h2>Create Account</h2> : <h2>Log in</h2>}
                 <p>By clicking <b>{isSignUp ? 'Create Account' : 'Log in'}</b>, you agree to our terms. Learn how we process your data
                     in our Privacy Policy page.
                 </p>

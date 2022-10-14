@@ -8,10 +8,10 @@ const SignUpForm = ({ setShowModal, isSignUp }) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
-    const closeBox = (evnt) => {
-        evnt.preventDefault();
-        setShowModal(false);
-    }
+    // const closeBox = (evnt) => {
+    //     evnt.preventDefault();
+    //     setShowModal(false);
+    // }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -34,8 +34,7 @@ const SignUpForm = ({ setShowModal, isSignUp }) => {
                 </section>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <button type="submit">{isSignUp ? 'Create Account' : 'Log in'}</button>
-                <button onClick={closeBox}>Close</button>
+                <button type="submit">{isSignUp ? 'Submit' : 'Log in'}</button>
             </div>
         </form>
     );
