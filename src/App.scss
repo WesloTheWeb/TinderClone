@@ -62,3 +62,21 @@ h1.home {
   opacity: .7;
   z-index: 9;
 }
+
+.onboarding {
+
+  label {
+    display: block;
+  }
+}
+
+.field-container {
+  position: relative;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+    display: block;
+    width: 100%;
+}
